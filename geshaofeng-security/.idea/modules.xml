@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/geshaofeng-security.iml" filepath="$PROJECT_DIR$/geshaofeng-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../geshaofeng-security-app/geshaofeng-security-app.iml" filepath="$PROJECT_DIR$/../geshaofeng-security-app/geshaofeng-security-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../geshaofeng-security-browser/geshaofeng-security-browser.iml" filepath="$PROJECT_DIR$/../geshaofeng-security-browser/geshaofeng-security-browser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../geshaofeng-security-core/geshaofeng-security-core.iml" filepath="$PROJECT_DIR$/../geshaofeng-security-core/geshaofeng-security-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../geshaofeng-security-demo/geshaofeng-security-demo.iml" filepath="$PROJECT_DIR$/../geshaofeng-security-demo/geshaofeng-security-demo.iml" />
+    </modules>
+  </component>
+</project>

@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.ServletWebRequest;
 
-import com.geshaofeng.security.browser.support.SimpleResponse;
+import com.geshaofeng.security.core.support.SimpleResponse;
 import com.geshaofeng.security.browser.support.SocialUserInfo;
 import com.geshaofeng.security.core.properties.SecurityConstants;
 import com.geshaofeng.security.core.properties.SecurityProperties;
@@ -77,5 +77,12 @@ public class BrowserSecurityController {
 		userInfo.setNickname(connection.getDisplayName());
 		userInfo.setHeadimg(connection.getImageUrl());
 		return userInfo;
+	}
+	
+	@GetMapping("/session/invalid")
+	@ResponseStatus(code = HttpStatus.UNAUTHORIZED)
+	public SimpleResponse sessionInvalid() {
+		String message = "session失效";
+		return new SimpleResponse(message);
 	}
 }

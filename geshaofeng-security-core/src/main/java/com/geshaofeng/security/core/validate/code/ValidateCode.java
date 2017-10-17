@@ -1,9 +1,15 @@
 package com.geshaofeng.security.core.validate.code;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class ValidateCode {
+public class ValidateCode implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4521556184380197457L;
+
 	private String code;
 	
 	private LocalDateTime expireTime;

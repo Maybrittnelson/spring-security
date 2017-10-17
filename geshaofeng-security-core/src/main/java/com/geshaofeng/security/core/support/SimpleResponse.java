@@ -1,13 +1,12 @@
-package com.geshaofeng.security.browser.support;
+package com.geshaofeng.security.core.support;
 
 public class SimpleResponse {
 	
-	public Object content;
-	
-	public SimpleResponse(Object content) {
-		super();
+	public SimpleResponse(Object content){
 		this.content = content;
 	}
+	
+	private Object content;
 
 	public Object getContent() {
 		return content;
@@ -16,6 +15,5 @@ public class SimpleResponse {
 	public void setContent(Object content) {
 		this.content = content;
 	}
-	
 	
 }

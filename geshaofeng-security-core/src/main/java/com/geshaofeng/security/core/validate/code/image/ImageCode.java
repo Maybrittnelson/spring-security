@@ -7,6 +7,11 @@ import com.geshaofeng.security.core.validate.code.ValidateCode;
 
 public class ImageCode extends ValidateCode {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2307179519263450689L;
+	
 	private BufferedImage image;
 	
 	public ImageCode(BufferedImage image, String code, int expireIn){

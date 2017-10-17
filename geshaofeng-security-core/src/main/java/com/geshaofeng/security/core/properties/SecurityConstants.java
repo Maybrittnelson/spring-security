@@ -38,5 +38,10 @@ public interface SecurityConstants {
 	 * 发送短信验证码 或 验证短信验证码时，传递手机号的参数的名称
 	 */
 	public static final String DEFAULT_PARAMETER_NAME_MOBILE = "mobile";
+	
+	/**
+	 * session失效默认的跳转地址
+	 */
+	public static final String DEFAULT_SESSION_INVALID_URL = "/geshaofeng-session-invalid.html";
 
 }

@@ -16,7 +16,7 @@ import org.springframework.security.web.authentication.SimpleUrlAuthenticationFa
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.geshaofeng.security.browser.support.SimpleResponse;
+import com.geshaofeng.security.core.support.SimpleResponse;
 import com.geshaofeng.security.core.properties.LoginResponseType;
 import com.geshaofeng.security.core.properties.SecurityProperties;
 
