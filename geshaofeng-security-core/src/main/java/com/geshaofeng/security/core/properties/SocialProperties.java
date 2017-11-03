@@ -2,6 +2,9 @@ package com.geshaofeng.security.core.properties;
 
 public class SocialProperties {
 	
+	/**
+	 * 过滤器链 拦截路径前缀 配置
+	 */
 	private String filterProcessesUrl = "/auth";
 	
 	private QQProperties qq = new QQProperties();

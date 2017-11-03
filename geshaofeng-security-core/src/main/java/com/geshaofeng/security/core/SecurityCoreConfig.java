@@ -8,13 +8,18 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.geshaofeng.security.core.properties.SecurityProperties;
 
+/**
+ * @author ShaoFeng
+ * {@link @Configuration} 声明成Bean工厂类
+ * {@link @EnableConfigurationProperties} 声明成配置类 可读取SecurityProperties
+ */
 @Configuration
 @EnableConfigurationProperties(SecurityProperties.class)
 public class SecurityCoreConfig {
 
-
+	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
+		return new BCryptPasswordEncoder();//返回bcrypt密码编码方式
 	}
 }

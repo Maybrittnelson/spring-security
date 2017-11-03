@@ -34,6 +34,11 @@ public class MyUserDetailsService implements UserDetailsService, SocialUserDetai
 		return buildUser(username);
 	}
 
+	/* (non-Javadoc)
+	 * @see org.springframework.social.security.SocialUserDetailsService#loadUserByUserId(java.lang.String)
+	 * 社交登录时 需要根据userId获取用户信息
+	 * security_userconnection表中userId
+	 */
 	@Override
 	public SocialUserDetails loadUserByUserId(String userId) throws UsernameNotFoundException {
 		logger.info("设计登录用户Id:" + userId);

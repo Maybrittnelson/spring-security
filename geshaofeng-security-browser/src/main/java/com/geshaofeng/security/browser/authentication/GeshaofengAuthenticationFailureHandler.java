@@ -20,6 +20,10 @@ import com.geshaofeng.security.core.support.SimpleResponse;
 import com.geshaofeng.security.core.properties.LoginResponseType;
 import com.geshaofeng.security.core.properties.SecurityProperties;
 
+/**
+ * @author ShaoFeng
+ *
+ */
 @Component("geshaofengAuthenticationFailureHandler")
 public class GeshaofengAuthenticationFailureHandler extends SimpleUrlAuthenticationFailureHandler {
 	
@@ -31,6 +35,9 @@ public class GeshaofengAuthenticationFailureHandler extends SimpleUrlAuthenticat
 	@Autowired
 	private SecurityProperties securityProperties;
 	
+	/*
+	 * 将失败的信息返回
+	 */
 	@Override
 	public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception)
 			throws IOException, ServletException {

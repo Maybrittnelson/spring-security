@@ -1,5 +1,11 @@
 package com.geshaofeng.security.core.social.qq.api;
 
+import javax.annotation.sql.DataSourceDefinition;
+
+/**
+ * @author ShaoFeng
+ * QQ用户信息
+ */
 public class QQUserInfo {
 
 	/**
@@ -78,8 +84,6 @@ public class QQUserInfo {
 	 * 标识是否为年费黄钻用户（0：不是； 1：是）
 	 */
 	private String is_yellow_year_vip;
-	
-	
 	public String getRet() {
 		return ret;
 	}
@@ -194,4 +198,6 @@ public class QQUserInfo {
 	public void setIs_yellow_year_vip(String is_yellow_year_vip) {
 		this.is_yellow_year_vip = is_yellow_year_vip;
 	}
+	
+	
 }

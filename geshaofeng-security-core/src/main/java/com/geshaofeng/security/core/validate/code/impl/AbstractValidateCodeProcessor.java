@@ -47,7 +47,6 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
 	 * @param request
 	 * @return
 	 */
-	@SuppressWarnings("unchecked")
 	private C generate(ServletWebRequest request) {
 		String type = getValidateCodeType(request).toString().toLowerCase();
 		String generatorName = type + ValidateCodeGenerator.class.getSimpleName();
@@ -95,11 +94,10 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
 	 * @return
 	 */
 	private ValidateCodeType getValidateCodeType(ServletWebRequest request) {
-		String type = StringUtils.substringBefore(getClass().getSimpleName(), "CodeProcessor");
+		String type = StringUtils.substringBefore(getClass().getSimpleName(), "CodeProcessor");//根据当前类获取类名
 		return ValidateCodeType.valueOf(type.toUpperCase());
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public void validate(ServletWebRequest request) {
 

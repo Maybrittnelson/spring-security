@@ -18,8 +18,8 @@ public class AbstractChannelSecurityConfig extends WebSecurityConfigurerAdapter 
 	
 	protected void applyPasswordAuthenticationConfig(HttpSecurity http) throws Exception {
 		http.formLogin()
-			.loginPage(SecurityConstants.DEFAULT_UNAUTHENTICATION_URL)
-			.loginProcessingUrl(SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_FORM)
+			.loginPage(SecurityConstants.DEFAULT_UNAUTHENTICATION_URL)//请求处理Controller
+			.loginProcessingUrl(SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_FORM)//表单url
 			.successHandler(geshaofengAuthenticationSuccessHandler)
 			.failureHandler(geshaofengAuthenticationFailureHandler);
 	}

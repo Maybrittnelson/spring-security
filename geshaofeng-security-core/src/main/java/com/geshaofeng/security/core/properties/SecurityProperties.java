@@ -9,6 +9,9 @@ public class SecurityProperties {
 	
 	private ValidateCodeProperties code = new ValidateCodeProperties();
 	
+	/**
+	 * 第三方授权属性 如 provideId 可随意更改
+	 */
 	private SocialProperties social = new SocialProperties();
 	
 	public BrowserProperties getBrowser() {

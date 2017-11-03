@@ -2,6 +2,11 @@ package com.geshaofeng.security.core.properties;
 
 import org.springframework.boot.autoconfigure.social.SocialProperties;
 
+/**
+ * @author ShaoFeng
+ * SocialProperties:
+ * 	已经有 appId appSecret
+ */
 public class QQProperties extends SocialProperties {
 	
 	private String providerId = "qq";

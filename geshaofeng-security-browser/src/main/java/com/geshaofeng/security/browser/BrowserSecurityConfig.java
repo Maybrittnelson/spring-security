@@ -88,12 +88,12 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
 					securityProperties.getBrowser().getSignUpUrl(),
 					securityProperties.getBrowser().getSession().getSessionInvalidUrl(),
 					securityProperties.getBrowser().getSignOutUrl(),
-					"/user/regist")
+					"/user/regist", "/img/*")//user/regist在后面授权讲 如何配置
 					.permitAll()
 				.anyRequest()
 				.authenticated()
 				.and()
-			.csrf().disable();
+			.csrf().disable();//csrf跨站token伪造
 		
 	}
 

@@ -57,6 +57,7 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
 		super.afterPropertiesSet();
 	
 		urlMap.put(SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_FORM, ValidateCodeType.IMAGE);
+		//
 		addUrlToMap(securityProperties.getCode().getImage().getUrl(), ValidateCodeType.IMAGE);
 	
 		urlMap.put(SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_MOBILE, ValidateCodeType.SMS);
@@ -66,8 +67,8 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
 	/**
 	 * 讲系统中配置的需要校验验证码的URL根据校验的类型放入map
 	 * 
-	 * @param urlString
-	 * @param type
+	 * @param urlString 
+	 * @param type 表单中的参数name
 	 */
 	protected void addUrlToMap(String urlString, ValidateCodeType type) {
 		if (StringUtils.isNotBlank(urlString)) {
@@ -90,14 +91,14 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
 			throws ServletException, IOException {
 	
-		ValidateCodeType type = getValidateCodeType(request);
+		ValidateCodeType type = getValidateCodeType(request);//根据请求url获取验证类型 IMAGE SMS
 		if (type != null) {
 			logger.info("校验请求(" + request.getRequestURI() + ")中的验证码,验证码类型" + type);
 			try {
 				validateCodeProcessorHolder.findValidateCodeProcessor(type)
 						.validate(new ServletWebRequest(request, response));
 				logger.info("验证码校验通过");
-			} catch (ValidateCodeException exception) {
+			} catch (ValidateCodeException exception) {//补货校验后的异常
 				authenticationFailureHandler.onAuthenticationFailure(request, response, exception);
 				return;
 			}
