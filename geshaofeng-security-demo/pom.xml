@@ -9,12 +9,12 @@
   </parent>
   
   <dependencies>
-  <dependency>
+ <dependency>
 	    <groupId>com.geshaofeng.security</groupId>
 	    <artifactId>geshaofeng-security-browser</artifactId>
 	    <version>${geshaofeng.security.version}</version>
 	  </dependency>
-<!-- 	  <dependency>
+  <!--<dependency>
 	    <groupId>com.geshaofeng.security</groupId>
 	    <artifactId>geshaofeng-security-app</artifactId>
 	    <version>${geshaofeng.security.version}</version>
